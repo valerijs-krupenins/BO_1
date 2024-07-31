@@ -1,7 +1,6 @@
 import React from "react";
 import { Admin, Resource, ListGuesser, Layout } from "react-admin";
-import { dataProvider } from "./dataProvider"; // Your data provider
-import EuroIcon from "@mui/icons-material/EuroRounded";
+import { dataProvider } from "./dataProvider";
 
 interface BO_Props {
   authProvider: any;
@@ -18,9 +17,9 @@ const BO_1 = ({ authProvider, envVariables, CustomMenu }: BO_Props) => (
     layout={(props) => <Layout {...props} menu={CustomMenu} />}
     darkTheme={null}
   >
-    <Resource icon={EuroIcon} name="posts" list={ListGuesser} />
-    <Resource icon={EuroIcon} name="photos" list={ListGuesser} />
-    <Resource icon={EuroIcon} name="todos" list={ListGuesser} />
+    <Resource name="posts" list={ListGuesser} />
+    <Resource name="photos" list={ListGuesser} />
+    <Resource name="todos" list={ListGuesser} />
   </Admin>
 );
 
